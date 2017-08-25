@@ -9,13 +9,15 @@ import { NavComponent } from './nav/nav.component';
 import { ChartsComponent } from './charts/charts.component';
 import { D3Service } from 'd3-ng2-service';
 import { D3Component } from './d3/d3.component';
+import { BarchartComponent } from './d3/barchart/barchart.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavComponent,
     ChartsComponent,
-    D3Component
+    D3Component,
+    BarchartComponent
   ],
   imports: [
     BrowserModule,
