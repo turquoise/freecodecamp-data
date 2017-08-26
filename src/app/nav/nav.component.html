@@ -1,30 +1,35 @@
-<amexio-menubar
-  [httpUrl]="'../../assets/menuData.json'"
-  [httpMethod]="'get'"
-  [dataReader]="'data'">
+<td-layout>
+  <td-navigation-drawer flex sidenavTitle="freecodecamp Data Visualization">
+    <md-nav-list>
+      <a md-list-item>Home</a>
+      <a md-list-item>Bar Chart</a>
+      <a md-list-item>Scatterplot Graph</a>
+      <a md-list-item>Heat Map</a>
+      <a md-list-item>Force Directed Graph</a>
+      <a md-list-item>Map Data Across the Globe</a>
+    </md-nav-list>
+  </td-navigation-drawer>
+  <td-layout-nav   navigationRoute="/">
+    <div td-toolbar-content layout="row" layout-align="start center" flex>
+      <button md-icon-button td-menu-button tdLayoutToggle>
+        <md-icon>menu</md-icon>
+      </button>
+      <div class="spacer"></div>
+      <span class="cursor-pointer">Home</span>
+      <span class="cursor-pointer">Bar Chart</span>
+      <span class="cursor-pointer">Scatterplot Graph</span>
+      <span class="cursor-pointer">Heat Map</span>
+      <span class="cursor-pointer">Force Directed Graph</span>
+      <span class="cursor-pointer">Map Data Across the Globe</span>
+      <span flex></span>
 
-  <amexio-tab-pane  [closable]="false">
-      <amexio-tab title="Personal" [active]="true">
-      <h4>Personal</h4>
-      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-    </amexio-tab>
-    <amexio-tab title="Work">
-      <h4>Work</h4>
-      Nullam nec dolor lobortis, dictum dolor ac, suscipit massa. Donec id suscipit nisi. Nunc sit amet aliquet risus. Aenean placerat suscipit risus at mollis. Quisque eleifend gravida scelerisque. In non eleifend nisi. Phasellus tempor hendrerit posuere. Praesent ornare rutrum mi et condimentum. Vestibulum tempus, urna non ultrices aliquam, ex ex blandit lacus, at porttitor odio ligula sed lacus. Praesent in luctus odio, at sodales orci. Vivamus vitae ullamcorper lectus. Etiam mattis fermentum arcu eu feugiat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam porttitor, erat sit amet pharetra aliquam, ex leo tincidunt erat, in commodo leo magna quis mauris. Maecenas aliquet fringilla dui, id molestie mi pellentesque sit amet. Praesent vel erat commodo, luctus metus id, dapibus nulla.
-    </amexio-tab>
-    <amexio-tab title="Notes">
-      <h4>Notes</h4>
-      Phasellus in condimentum elit. In et vestibulum sem. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam erat volutpat. Sed viverra libero vel massa accumsan aliquet. Mauris a dui nec sapien pretium euismod. Sed lobortis quis sapien a mollis. Nullam ex nibh, malesuada eget rutrum eu, dapibus quis ante. Proin non convallis augue, at tincidunt nisi. Cras et metus blandit, sollicitudin mi ac, fringilla libero.
-    </amexio-tab>
-    </amexio-tab-pane>
+    </div>
 
-  <!--<ng-template #amexioNavHeaderTmpl  let-navHeader="navHeader">
-                <span [attr.class]="navHeader.icon">{{navHeader.text}}</span>
-              </ng-template>
-              <ng-template #amexioMenuHeaderTmpl  let-menuHeader="menuHeader">
-                <span [attr.class]="menuHeader.icon">{{menuHeader.text}}</span>
-              </ng-template>
-              <ng-template #amexioSubMenuTmpl  let-subMenus="subMenus">
-                <span [attr.class]="subMenus.icon">{{subMenus.text}}</span>
-              </ng-template>-->
-</amexio-menubar>
+
+    <div class="container">
+      <div class="space"></div>
+      <app-charts></app-charts>
+      <app-d3></app-d3>
+    </div>
+  </td-layout-nav>
+</td-layout>
