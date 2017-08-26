@@ -8,6 +8,19 @@ span {
   padding: 10px;
 }
 
-td-layout {
+.container {
+
+}
+
+.layout {
   background-color: white;
+}
+
+#nav-list {
+  color: black;
+}
+
+.nav-drawer {
+  background-color: white;
+  color: red;
 }
