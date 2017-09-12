@@ -1,13 +1,37 @@
 <td-layout class="container">
-
   <td-navigation-drawer flex sidenavTitle="freecodecamp Data Visualization" color="primary" class="nav-drawer">
     <md-nav-list id="nav-list">
-      <a md-list-item>Home</a>
-      <a md-list-item>Bar Chart</a>
-      <a md-list-item>Scatterplot Graph</a>
-      <a md-list-item>Heat Map</a>
-      <a md-list-item>Force Directed Graph</a>
-      <a md-list-item>Map Data Across the Globe</a>
+      <a md-list-item
+        routerLink="/home"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true}">
+        Home
+      </a>
+      <a md-list-item
+        routerLink="/bar-chart"
+        routerLinkActive="active">
+        Bar Chart
+      </a>
+      <a md-list-item
+        routerLink="/scatterplot"
+        routerLinkActive="active">
+        Scatterplot Graph
+      </a>
+      <a md-list-item
+        routerLink="/heat-map"
+        routerLinkActive="active">
+        Heat Map
+      </a>
+      <a md-list-item
+        routerLink="/force"
+        routerLinkActive="active">
+        Force Directed Graph
+      </a>
+      <a md-list-item
+        routerLink="/globe"
+        routerLinkActive="active">
+        Map Data Across the Globe
+      </a>
     </md-nav-list>
   </td-navigation-drawer>
   <td-layout-nav  navigationRoute="/" class="layout">
@@ -16,21 +40,20 @@
         <md-icon>menu</md-icon>
       </button>
       <div class="spacer"></div>
-      <span class="cursor-pointer">Home</span>
-      <span class="cursor-pointer">Bar Chart</span>
-      <span class="cursor-pointer">Scatterplot Graph</span>
-      <span class="cursor-pointer">Heat Map</span>
-      <span class="cursor-pointer">Force Directed Graph</span>
-      <span class="cursor-pointer">Map Data Across the Globe</span>
+      <span class="cursor-pointer" routerLink="/home">Home</span>
+      <span class="cursor-pointer" routerLink="/bar-chart">Bar Chart</span>
+      <span class="cursor-pointer" routerLink="/scatterplot">Scatterplot Graph</span>
+      <span class="cursor-pointer" routerLink="/heat-map">Heat Map</span>
+      <span class="cursor-pointer" routerLink="/force">Force Directed Graph</span>
+      <span class="cursor-pointer" routerLink="/globe">Map Data Across the Globe</span>
       <span flex></span>
 
     </div>
-
-
     <div class="container">
       <div class="space"></div>
-      <app-charts></app-charts>
-      <app-d3></app-d3>
+
+      <router-outlet></router-outlet>
+
     </div>
   </td-layout-nav>
 </td-layout>
